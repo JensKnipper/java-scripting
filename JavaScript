@@ -1,8 +1,0 @@
-#!/usr/bin/env -S java --source 25
-
-
-void main() {
-	var name = IO.readln("Please enter your name: ");
-	IO.println("Hello " + name + "!");
-}
-
