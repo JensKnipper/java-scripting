@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "01-example-script",
+        "02-script-with-extra-class",
+        "03-script-with-dependency",
+        "04-jbang",
+        "05-jbang-picocli",
+        "06-tamboui",
+    ],
+    "java.project.referencedLibraries": []
+}
