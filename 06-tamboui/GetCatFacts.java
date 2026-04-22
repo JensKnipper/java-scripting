@@ -4,6 +4,8 @@
 //DEPS dev.tamboui:tamboui-toolkit:0.2.0-SNAPSHOT
 //DEPS dev.tamboui:tamboui-jline3-backend:0.2.0-SNAPSHOT
 
+//NATIVE_OPTIONS -H:IncludeResources=.*\.properties
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -24,7 +26,7 @@ import static dev.tamboui.toolkit.Toolkit.*;
 
 
 public class GetCatFacts extends ToolkitApp {
-    
+
     public static final String banner = """
 :'######:::::'###::::'########:'########::::'###:::::'######::'########::'######::
 '##... ##:::'## ##:::... ##..:: ##.....::::'## ##:::'##... ##:... ##..::'##... ##:
@@ -58,6 +60,7 @@ public class GetCatFacts extends ToolkitApp {
                 .style(Style.create().yellow())
                 .build()
             ).yellow(),
+            spacer(),
             text("Press 'q' to quit").dim(),
             text("Press any other key for another cat fact").dim()
         ).rounded()

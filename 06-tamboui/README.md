@@ -12,3 +12,11 @@
 - explain it
 - execute it
 
+## 3 - add as JBang app
+
+- `jbang app install --name cat-fact GetCatFacts.java`
+
+## 4 - native
+
+- `sdk use java 25.0.2-graalce`
+- `jbang --native GetCatFacts.java`

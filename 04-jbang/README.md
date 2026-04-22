@@ -24,7 +24,3 @@
 
 - add json.org dependency
 - add `//DEPS org.json:json:20251224`
-
-## 6 - add as JBang app
-
-- `jbang app install --name cat-fact GetCatFacts.java`
