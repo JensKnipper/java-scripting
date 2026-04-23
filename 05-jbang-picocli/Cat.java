@@ -18,8 +18,8 @@ class Cat implements Callable<Integer> {
     @Parameters(index = "0", description = "The File to print")
     private String path;
 
-    @Option(names = { "-n", "--numbers" }, description="display line numbers")
-    private boolean numbers;
+    @Option(names = { "-n", "--number" }, description="display line numbers")
+    private boolean number;
 
     public static void main(String... args) {
         int exitCode = new CommandLine(new Cat()).execute(args);
@@ -30,7 +30,7 @@ class Cat implements Callable<Integer> {
     public Integer call() throws Exception {
         List<String> lines = Files.readAllLines(Path.of(path));
         for (int i = 0; i < lines.size(); i++) {
-            if(numbers) {
+            if(number) {
                 IO.print((i + 1) + "  ");
             }
             IO.println(lines.get(i));

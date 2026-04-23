@@ -61,8 +61,8 @@ public class GetCatFacts extends ToolkitApp {
                 .build()
             ).yellow(),
             spacer(),
-            text("Press 'q' to quit").dim(),
-            text("Press any other key for another cat fact").dim()
+            text("Press 'q' to quit 🛑").dim(),
+            text("Press any other key for another cat fact 🐈").dim()
         ).rounded()
         .onKeyEvent(this::handleKey);
     }
