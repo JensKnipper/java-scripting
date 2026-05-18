@@ -1,8 +1,8 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
 //DEPS org.json:json:20251224
-//DEPS dev.tamboui:tamboui-toolkit:0.2.0-SNAPSHOT
-//DEPS dev.tamboui:tamboui-jline3-backend:0.2.0-SNAPSHOT
+//DEPS dev.tamboui:tamboui-toolkit:0.3.0
+//DEPS dev.tamboui:tamboui-jline3-backend:0.3.0
 
 //NATIVE_OPTIONS -H:IncludeResources=.*\.properties
 
@@ -57,9 +57,9 @@ public class GetCatFacts extends ToolkitApp {
             widget(Paragraph.builder()
                 .text(Text.from(catFact.fact))
                 .overflow(Overflow.WRAP_WORD)
-                .style(Style.create().yellow())
+                .style(Style.create().magenta())
                 .build()
-            ).yellow(),
+            ),
             spacer(),
             text("Press 'q' to quit 🛑").dim(),
             text("Press any other key for another cat fact 🐈").dim()
