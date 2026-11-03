@@ -10,4 +10,10 @@
 
 ## 3 - execute
 
-- run `java -cp 'lib/*' GetCatFacts.java`
+- run `java -cp 'deps/*' GetCatFacts.java`
+
+# 4 - https://github.com/codejive/java-jpm
+- run `jpm install com.opencsv:opencsv:5.12.0`
+- show what changed:
+    - run `cat app.yml`
+    - run `ls deps`

@@ -1,5 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS org.json:json:20251224
+//DEPS org.json:json:20260814
 //JAVA 25+
 
 import java.net.URI;

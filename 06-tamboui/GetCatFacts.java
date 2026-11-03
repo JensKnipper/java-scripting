@@ -1,8 +1,8 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
-//DEPS org.json:json:20251224
-//DEPS dev.tamboui:tamboui-toolkit:0.3.0
-//DEPS dev.tamboui:tamboui-jline3-backend:0.3.0
+//DEPS org.json:json:20260814
+//DEPS dev.tamboui:tamboui-toolkit:0.6.0
+//DEPS dev.tamboui:tamboui-jline3-backend:0.6.0
 
 //NATIVE_OPTIONS -H:IncludeResources=.*\.properties
 
@@ -14,13 +14,10 @@ import java.net.http.HttpResponse;
 import org.json.JSONObject;
 
 import dev.tamboui.style.Overflow;
-import dev.tamboui.style.Style;
-import dev.tamboui.text.Text;
 import dev.tamboui.toolkit.app.ToolkitApp;
 import dev.tamboui.toolkit.element.Element;
 import dev.tamboui.toolkit.event.EventResult;
 import dev.tamboui.tui.event.KeyEvent;
-import dev.tamboui.widgets.paragraph.Paragraph;
 
 import static dev.tamboui.toolkit.Toolkit.*;
 
@@ -52,17 +49,18 @@ public class GetCatFacts extends ToolkitApp {
     @Override
     protected Element render() {
         return panel(
-            richTextArea(banner).bold().cyan(),
+            richTextArea(banner)
+                .bold()
+                .cyan(),
             spacer(),
-            widget(Paragraph.builder()
-                .text(Text.from(catFact.fact))
-                .overflow(Overflow.WRAP_WORD)
-                .style(Style.create().magenta())
-                .build()
-            ),
+            text(catFact.fact())
+                .overflow(Overflow.WRAP_WORD)                
+                .magenta(),
             spacer(),
-            text("Press 'q' to quit 🛑").dim(),
-            text("Press any other key for another cat fact 🐈").dim()
+            text("Press 'q' to quit 🛑")
+                .dim(),
+            text("Press any other key for another cat fact 🐈")
+                .dim()
         ).rounded()
         .onKeyEvent(this::handleKey);
     }
